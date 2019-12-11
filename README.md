@@ -24,6 +24,11 @@
 2. [Angular window resize event (@HostListener)](https://stackoverflow.com/a/35527852)
 3. [Angular Debounce decorator example](https://plnkr.co/edit/3J0dcDaLTJBxkzo8Akyg?p=preview)
 4. [Throttle implementation](https://kanboo.github.io/2018/05/03/JS-debounce-throttle)
+### Bug fix
+5. [TypeScript method decorator — 'this' with noImplicitThis enabled](https://stackoverflow.com/a/53847731)
+  + These Q&As on stackoverflow help on fixing the bug: `this = undefined`
+  + Fixed on [`#L23`](./decorator.debounce-throttle.ts#L23) & [`#L55`](decorator.debounce-throttle.ts#L55)
+    - By adding `this` as the first arg (because arrow function not allow doing so, the name `_dummy` is given)
 
 ## - License
 * This project is licensed under the MIT License  
